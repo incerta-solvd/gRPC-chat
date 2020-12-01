@@ -1,0 +1,20 @@
+syntax="proto3";
+
+package chat;
+
+service Chat {
+  rpc enterChat(EnterChatRequest) returns (EnterChatReply) {};
+}
+
+message User {
+  string id = 1;
+  string name = 2;
+}
+
+message EnterChatRequest {
+  string username = 1;
+}
+
+message EnterChatReply {
+  User user = 1;
+}
